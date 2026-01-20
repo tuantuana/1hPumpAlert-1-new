@@ -8,7 +8,7 @@ const to = from; // Thời gian hiện tại
 
 
 module.exports = {
-    TELEGRAM_BOT_TOKEN: '8298406136:AAHJFcaUO7zaBK0aD4c65BRa3UneAxGUfWo',
+    TELEGRAM_BOT_TOKEN: '8070963710:AAEP3xd18qvqSGLNDl3QaDbz2aoSCuZwEiA',
     // TELEGRAM_BOT_TOKEN: '7640879888:AAGG-YwTdCiAjimmnMZnAXDqYeNYmn78OsI',
     // 👇 đổi từ CHAT_ID sang CHAT_IDS
     TELEGRAM_CHAT_IDS: [
