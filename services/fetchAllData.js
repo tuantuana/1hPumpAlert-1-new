@@ -15,10 +15,10 @@ async function fetchAllData() {
     const allData = {};
 
 
-const now = new Date(); // Lấy thời gian hiện tại
-const nowTimestamp = Math.floor(now.getTime() / 1000); // Unix timestamp hiện tại
-const from = Math.floor(nowTimestamp / 3600) * 3600; // Làm tròn về đầu giờ
-const to = from; // Thời gian hiện tại
+const nowTimestamp = Math.floor(Date.now() / 1000);
+    const currentHour = Math.floor(nowTimestamp / 3600) * 3600;
+    const from = currentHour - 3600; // 19:00
+    const to = from; 
 
 
 
@@ -60,7 +60,6 @@ const to = from; // Thời gian hiện tại
                     console.log(`✅ Nhóm ${i + 1 + idx} có ${filteredSymbols.length} symbols tăng mạnh >10%:`);
                     console.log("➡", filteredSymbols.join(", ") || "(không có)");
                     console.log("📊 Số lượng symbol trong nhóm:", Object.keys(tempGroupData).length);
-
 
                     // Gộp vào allData để dùng sau (gửi telegram cuối cùng)
                     Object.entries(tempGroupData).forEach(([symbol, history]) => {
